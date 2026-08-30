@@ -1,62 +1,60 @@
 # ASD Screening Tool
 
-A machine learning project that uses behavioral screening responses and
-basic demographic information to classify ASD screening outcomes.
+A machine learning project that predicts ASD screening outcomes using
+behavioral questionnaire responses and basic demographic information.
 
-The project includes the complete ML workflow — from dataset analysis and
-preprocessing to model training, hyperparameter tuning, probability
-calibration, explainability, and an interactive Streamlit application.
+The project uses XGBoost for prediction, SHAP for explainability, and
+Streamlit for the web application.
 
-> **Note:** This is an academic/portfolio project and is not intended for
-> medical diagnosis or clinical decision-making.
-
----
-
-## Overview
-
-The goal of this project was to build a complete end-to-end machine learning
-system rather than just train a classifier and report its accuracy.
-
-The workflow covers:
-
-- Dataset exploration and cleaning
-- Feature analysis
-- Numerical and categorical preprocessing
-- Train/test splitting
-- Cross-validation
-- XGBoost model development
-- Hyperparameter tuning
-- Feature testing
-- Probability calibration
-- Model evaluation
-- SHAP-based explainability
-- Interactive Streamlit application
-
-The final model achieved **99.29% accuracy** and an **F1 score of 98.67%**
-on the held-out test set.
-
----
+> Note: This project is for educational purposes and is not a medical
+> diagnostic tool.
 
 ## Demo
 
-The project includes an interactive Streamlit application where a user can:
+### Application Overview
 
-1. Answer the 10 behavioral screening questions
-2. Enter the required personal information
-3. View the screening score
-4. Get the model prediction
-5. See the predicted probabilities
-6. View the features that influenced the prediction through SHAP
+![Overview](screenshots/overview.png)
 
-### Application
+### Screening Questionnaire
+
+![Questionnaire](screenshots/questionnaire.png)
+
+### Personal Information
+
+![Inputs](screenshots/inputs.png)
+
+### Prediction & Explanation
+
+![Results](screenshots/results.png)
+
+## Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- SHAP
+- Matplotlib
+- Streamlit
+- Joblib
+- Git & GitHub
+
+## Machine Learning
+
+The model uses:
+
+- Data preprocessing
+- Feature analysis
+- Cross-validation
+- Hyperparameter tuning
+- XGBoost classification
+- Probability calibration
+- SHAP explainability
+
+Final XGBoost parameters:
 
 ```text
-Questionnaire
-      ↓
-Input preprocessing
-      ↓
-Calibrated XGBoost model
-      ↓
-Prediction + probability
-      ↓
-SHAP explanation
+learning_rate = 0.2
+max_depth = 3
+n_estimators = 150
