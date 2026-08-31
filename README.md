@@ -9,23 +9,6 @@ Streamlit for the web application.
 > Note: This project is for educational purposes and is not a medical
 > diagnostic tool.
 
-## Demo
-
-### Application Overview
-
-![Overview](screenshots/overview.png)
-
-### Screening Questionnaire
-
-![Questionnaire](screenshots/questionnaire.png)
-
-### Personal Information
-
-![Inputs](screenshots/inputs.png)
-
-### Prediction & Explanation
-
-![Results](screenshots/results.png)
 
 ## Tech Stack
 
